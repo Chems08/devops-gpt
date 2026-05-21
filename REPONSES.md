@@ -61,7 +61,7 @@ Attributs à stocker pour un `Message` :
 | `date_creation`  | DateTime       | Date et heure d'envoi du message (horodatage ISO 8601).                     |
 | `user_id`        | UUID / Integer | Identifiant de l'utilisateur ayant initié la conversation (clé étrangère). |
 | `conversation_id`| UUID           | Identifiant de la conversation à laquelle le message appartient.            |
-| `modele_ia`      | String         | Nom du modèle utilisé pour générer la réponse (ex: `gpt-4o-mini`).          |
+| `modele_ia`      | String         | Nom du modèle utilisé pour générer la réponse.          |
 
 ---
 
@@ -71,9 +71,7 @@ Attributs à stocker pour un `Message` :
 
 #### Question A — User Story
 
-> **En tant qu'** utilisateur de DevOpsGPT,
-> **je veux** pouvoir souscrire à un abonnement Premium mensuel par paiement en ligne,
-> **afin de** bénéficier d'un accès illimité aux modèles avancés (GPT-4), d'une priorité de traitement et d'un historique de conversations étendu.
+**En tant qu'** utilisateur de DevOpsGPT, **je veux** pouvoir souscrire à un abonnement Premium mensuel par paiement en ligne, **afin de** bénéficier d'un accès illimité aux modèles avancés, d'une priorité de traitement et d'un historique de conversations étendu.
 
 **Critères d'acceptation :**
 - L'utilisateur peut choisir une formule (mensuelle / annuelle).
@@ -150,7 +148,7 @@ Sur l'interface web de GitHub :
 5. Cliquer sur le bouton vert **`New repository secret`**.
 6. Renseigner :
    - **Name** : `OPENAI_API_KEY`
-   - **Secret** : la valeur de la clé (ex : `sk-xxxxxxxx...`)
+   - **Secret** : la valeur de la clé
 7. Cliquer sur **`Add secret`**.
 
 Le secret est désormais chiffré et accessible uniquement par les workflows GitHub Actions du dépôt — il n'est jamais affiché en clair, même aux administrateurs.
@@ -168,5 +166,3 @@ Dans `.github/workflows/main.yml`, on injecte le secret comme variable d'environ
     OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
   run: echo "Déploiement en cours..."
 ```
-
-> Le secret n'apparaît jamais dans les logs : GitHub le masque automatiquement (`***`).
