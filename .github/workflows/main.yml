@@ -1,6 +1,6 @@
 name: CI/CD DevOpsGPT
 
-# Déclencheurs : push sur main OU création d'un tag commençant par "v"
+# Déclencheurs : push sur main ou création d'un tag commençant par "v"
 on:
   push:
     branches:
@@ -22,11 +22,11 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Installer les dépendances (backend)
+      - name: Installer les dépendances
         working-directory: ./backend
         run: npm install
 
-      - name: Lancer les tests (backend)
+      - name: Lancer les tests
         working-directory: ./backend
         run: npm test
 

@@ -29,8 +29,6 @@ services:
   cache:
     image: redis:7-alpine
     container_name: devopsgpt-cache
-    # Redis n'a pas besoin d'être exposé sur l'hôte :
-    # chat-api communique avec lui en interne via redis://cache:6379
     expose:
       - "6379"
     networks:

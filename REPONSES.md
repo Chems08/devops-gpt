@@ -87,7 +87,7 @@ Attributs à stocker pour un `Message` :
 
 ```bash
 git checkout -b feature-premium-subscription
-# ... développement du code ...
+
 git add .
 git commit -m "feat: implémentation de l'abonnement Premium"
 git push -u origin feature-premium-subscription
@@ -105,8 +105,6 @@ git tag -a v1.0.0 -m "Release v1.0.0 - Abonnement Premium"
 
 ```bash
 git push origin v1.0.0
-# ou pour pousser tous les tags :
-# git push origin --tags
 ```
 
 ---
