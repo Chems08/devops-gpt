@@ -7,7 +7,7 @@
 
 ## Exercice 1 : Conception Logicielle
 
-### 1. Diagramme de Contexte (2 pts)
+### 1. Diagramme de Contexte
 
 Le système **DevOpsGPT** interagit avec un acteur (l'Utilisateur) et deux systèmes externes (l'API GPT-4 et la Base de données).
 
@@ -28,7 +28,7 @@ flowchart LR
 
 ---
 
-### 2. Organigramme / Flowchart (3 pts)
+### 2. Organigramme / Flowchart
 
 Étapes de fonctionnement lors de l'envoi d'un message par l'utilisateur :
 
@@ -49,7 +49,7 @@ flowchart TD
 
 ---
 
-### 3. Dictionnaire de données (1 pt)
+### 3. Dictionnaire de données
 
 Attributs à stocker pour un `Message` :
 
@@ -67,7 +67,7 @@ Attributs à stocker pour un `Message` :
 
 ## Exercice 2 : Git et Docker
 
-### 1. Méthodologie et Git (2 pts)
+### 1. Méthodologie et Git
 
 #### Question A — User Story
 
@@ -111,7 +111,7 @@ git push origin v1.0.0
 
 ---
 
-### 2. Dockerisation (3 pts)
+### 2. Dockerisation
 
 Voir les fichiers :
 - [backend/Dockerfile](backend/Dockerfile)
@@ -119,7 +119,7 @@ Voir les fichiers :
 
 ---
 
-### 3. Orchestration avec Docker Compose (2 pts)
+### 3. Orchestration avec Docker Compose
 
 Voir le fichier [docker-compose.yml](docker-compose.yml) à la racine du projet.
 
@@ -133,13 +133,13 @@ docker compose up --build
 
 ## Exercice 3 : CI/CD avec GitHub Actions
 
-### 1. Le Workflow CI/CD (5 pts)
+### 1. Le Workflow CI/CD
 
 Voir le fichier [.github/workflows/main.yml](.github/workflows/main.yml).
 
 ---
 
-### 2. Sécurité et Secrets (2 pts)
+### 2. Sécurité et Secrets
 
 #### Question A — Où enregistrer le secret `OPENAI_API_KEY` sur GitHub ?
 
