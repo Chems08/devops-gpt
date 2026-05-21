@@ -13,10 +13,10 @@ Le système **DevOpsGPT** interagit avec un acteur (l'Utilisateur) et deux syst�
 
 ```mermaid
 flowchart LR
-    User(["👤 Utilisateur"])
-    System(["🤖 DevOpsGPT<br/>(Système)"])
-    GPT(["🧠 API GPT-4<br/>(OpenAI)"])
-    DB[("🗄️ Base de données<br/>(Historique)")]
+    User(["Utilisateur"])
+    System(["DevOpsGPT<br/>(Système)"])
+    GPT(["API GPT-4<br/>(OpenAI)"])
+    DB[("Base de données<br/>(Historique)")]
 
     User -- "Envoie une question" --> System
     System -- "Renvoie la réponse" --> User
