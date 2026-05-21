@@ -1,0 +1,39 @@
+services:
+
+  chat-api:
+    build: ./backend
+    container_name: devopsgpt-api
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - REDIS_URL=redis://cache:6379
+      # - OPENAI_API_KEY=${OPENAI_API_KEY}  # à activer si .env présent
+    depends_on:
+      - cache
+    networks:
+      - devopsgpt-net
+
+  chat-ui:
+    build: ./frontend
+    container_name: devopsgpt-ui
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://chat-api:3000
+    depends_on:
+      - chat-api
+    networks:
+      - devopsgpt-net
+
+  cache:
+    image: redis:7-alpine
+    container_name: devopsgpt-cache
+    ports:
+      - "6379:6379"
+    networks:
+      - devopsgpt-net
+
+networks:
+  devopsgpt-net:
+    driver: bridge
